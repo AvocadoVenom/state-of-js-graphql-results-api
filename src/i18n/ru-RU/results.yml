@@ -231,6 +231,30 @@ translations:
     - key: blocks.entity.github_link
       t: GitHub
 
+    # cardinality
+    - key: blocks.all_sections_tools_cardinality_by_user.title
+      t: Кардинальность использования технологии
+    - key: blocks.all_sections_tools_cardinality_by_user.description
+      t: Сколько процентов опрошенных используют определённое количество технологий в каждом разделе.
+
+    - key: blocks.front_end_frameworks_tools_cardinality_by_user.title
+      t: Кардинальность использования технологии
+    - key: blocks.front_end_frameworks_tools_cardinality_by_user.description
+      t: Сколько процентов опрошенных используют определённое количество технологий  в каждом разделе (учитываются ответы за вариант «Буду использовать снова»).
+
+    # tools arrows
+    - key: blocks.tools_arrows.title
+      t: Изменения во времени
+    - key: blocks.tools_arrows.description
+      t: |
+          Каждая линия проходит с 2016 по 2020 год. Чем выше точка, тем больше людей использовало технологию.
+          Чем правее точка, тем больше людей хотят изучить её или уже использовали и будут снова пользоваться ей.
+
+    - key: blocks.tools_arrows.note
+      t: |
+          - В некоторых линий пропущены года.
+          - Не показываются технологии с данными только за один год.
+
     # tools quadrant
     - key: blocks.tools_quadrant.title
       t: Сравнение удовлетворённости и использования
@@ -247,6 +271,9 @@ translations:
           - **ИЗБЕГАЮТ**: Низкая степень использования, высокая степень удовлетворённости. Технологии, которые лучше избегать в настоящий момент.
 
           - **ОЦЕНИВАЮТ**: Высокая степень использования, низкая степень удовлетворённости. Технологии, от которых, возможно, стоит отказаться.
+
+    - key: blocks.tools_quadrant.satisfaction.note
+      t: Стоит отметить, что TypeScript отображается на графике дважды, потому что он рассматривается как в разделе «Разновидности JavaScript», так и в разделе «Сборщики».
 
     - key: blocks.tools_quadrant.interest.description
       t: |
@@ -304,7 +331,7 @@ translations:
         - Удовлетворённость: сравнение ответов **Буду использовать снова** и **Больше не буду использовать**.
         - Заинтересованность: сравнение ответов **Хочу изучить** и **Не интересно**.
         - Использование: сравнение ответов **Буду использовать снова**/**Больше не буду использовать** с общим количеством.
-        - Узнаваемость: разница между количеством ответов за узнаваемостью и количеством ответов за вариант ответа **Впервые слышу**.
+        - Узнаваемость: разница между количеством ответов за узнаваемость и количеством ответов за вариант ответа **Впервые слышу**.
 
     # happiness
     - key: blocks.happiness.title
@@ -412,6 +439,15 @@ translations:
     - key: charts.ranges_multiple_diverging_lines.negative_offset
       t: отрицательное отклонение
 
+    - key: charts.tools_arrows.negative_opinion
+      t: Негативное отношение
+    - key: charts.tools_arrows.positive_opinion
+      t: Положительное отношение
+    - key: charts.tools_arrows.have_not_used
+      t: Не использовал
+    - key: charts.tools_arrows.have_used
+      t: Использовал
+
     ###########################################################################
     # Sharing
     ###########################################################################
@@ -419,19 +455,19 @@ translations:
     - key: share.share
       t: Поделиться
     - key: share.site.title
-      t: Узнайте результаты опроса State Of CSS 2020
+      t: Узнайте результаты опроса {siteTitle}
     - key: share.site.twitter_text
-      t: 'Узнайте результаты опроса CSS 2020 {link} #StateOfCSS'
+      t: 'Узнайте результаты опроса {siteTitle} {link} {hashtag}'
     - key: share.site.subject
-      t: Результаты опроса State Of JavaScript
+      t: Результаты опроса {siteTitle}
     - key: share.site.body
-      t: 'Лишь некоторые интересные результаты опроса по CSS: {link}'
+      t: 'Лишь некоторые интересные результаты опроса: {link}'
     - key: share.block.twitter_text
-      t: '#StateOfCSS 2020: {title} {link}'
+      t: '{hashtag} {year}: {title} {link}'
     - key: share.block.subject
-      t: Результаты опроса State Of CSS
+      t: Результаты опроса {siteTitle}
     - key: share.block.body
-      t: 'Лишь некоторые интересные результаты опроса по CSS ({title}): {link}'
+      t: 'Лишь некоторые интересные результаты опроса ({title}): {link}'
     - key: share.twitter
       t: Поделиться в Twitter
     - key: share.facebook
@@ -518,7 +554,7 @@ translations:
 
     - key: hints.completion_hint
       t: >
-          Поскольку все вопросы являются необязательными, все они имеют разное количество ответов.
+          Поскольку все вопросы являются необязательными, у них разное количество ответов.
           Индикатор заполнения (<span class="hint-completion-indicator">◕</span>) рядом с каждым вопросом даст понять, сколько людей ответило на него.
 
     - key: hints.tool_modal_hint
